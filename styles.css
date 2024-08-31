@@ -1,0 +1,453 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+}
+
+body {
+  background: linear-gradient(120deg, #a1c4fd, #c2e9fb);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+h1 {
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  color: #333;
+}
+
+.calculator {
+  width: 100%;
+}
+
+.input-group {
+  margin-bottom: 1rem;
+}
+
+.input-group label {
+  display: block;
+  font-size: 1rem;
+  color: #555;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+button {
+  background: linear-gradient(120deg, #f093fb, #f5576c);
+  border: none;
+  color: white;
+  padding: 0.75rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: linear-gradient(120deg, #f5576c, #f093fb);
+}
+
+#result {
+  margin-top: 1.5rem;
+  display: none;
+}
+
+#result p {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.bmi-status {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.polka-dot {
+  position: absolute;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.2);
+  animation: move 25s infinite;
+  z-index: 0;
+}
+
+@keyframes move {
+  0% {
+    transform: translateY(0) translateX(0);
+  }
+  100% {
+    transform: translateY(-100vh) translateX(100vw);
+  }
+}
+
+.dot1 {
+  width: 50px;
+  height: 50px;
+  left: 5%;
+  top: 10%;
+  animation-duration: 20s;
+}
+.dot2 {
+  width: 30px;
+  height: 30px;
+  left: 15%;
+  top: 20%;
+  animation-duration: 22s;
+}
+.dot3 {
+  width: 40px;
+  height: 40px;
+  left: 25%;
+  top: 15%;
+  animation-duration: 24s;
+}
+.dot4 {
+  width: 60px;
+  height: 60px;
+  left: 35%;
+  top: 25%;
+  animation-duration: 26s;
+}
+.dot5 {
+  width: 25px;
+  height: 25px;
+  left: 45%;
+  top: 30%;
+  animation-duration: 28s;
+}
+.dot6 {
+  width: 45px;
+  height: 45px;
+  left: 55%;
+  top: 20%;
+  animation-duration: 30s;
+}
+.dot7 {
+  width: 35px;
+  height: 35px;
+  left: 65%;
+  top: 10%;
+  animation-duration: 32s;
+}
+.dot8 {
+  width: 55px;
+  height: 55px;
+  left: 75%;
+  top: 5%;
+  animation-duration: 34s;
+}
+.dot9 {
+  width: 20px;
+  height: 20px;
+  left: 85%;
+  top: 15%;
+  animation-duration: 36s;
+}
+.dot10 {
+  width: 30px;
+  height: 30px;
+  left: 95%;
+  top: 20%;
+  animation-duration: 38s;
+}
+.dot11 {
+  width: 40px;
+  height: 40px;
+  left: 5%;
+  top: 40%;
+  animation-duration: 40s;
+}
+.dot12 {
+  width: 60px;
+  height: 60px;
+  left: 15%;
+  top: 50%;
+  animation-duration: 42s;
+}
+.dot13 {
+  width: 25px;
+  height: 25px;
+  left: 25%;
+  top: 35%;
+  animation-duration: 44s;
+}
+.dot14 {
+  width: 45px;
+  height: 45px;
+  left: 35%;
+  top: 45%;
+  animation-duration: 46s;
+}
+.dot15 {
+  width: 35px;
+  height: 35px;
+  left: 45%;
+  top: 40%;
+  animation-duration: 48s;
+}
+.dot16 {
+  width: 55px;
+  height: 55px;
+  left: 55%;
+  top: 35%;
+  animation-duration: 50s;
+}
+.dot17 {
+  width: 20px;
+  height: 20px;
+  left: 65%;
+  top: 50%;
+  animation-duration: 52s;
+}
+.dot18 {
+  width: 30px;
+  height: 30px;
+  left: 75%;
+  top: 60%;
+  animation-duration: 54s;
+}
+.dot19 {
+  width: 40px;
+  height: 40px;
+  left: 85%;
+  top: 45%;
+  animation-duration: 56s;
+}
+.dot20 {
+  width: 60px;
+  height: 60px;
+  left: 95%;
+  top: 55%;
+  animation-duration: 58s;
+}
+.dot21 {
+  width: 25px;
+  height: 25px;
+  left: 5%;
+  top: 70%;
+  animation-duration: 60s;
+}
+.dot22 {
+  width: 45px;
+  height: 45px;
+  left: 15%;
+  top: 65%;
+  animation-duration: 62s;
+}
+.dot23 {
+  width: 35px;
+  height: 35px;
+  left: 25%;
+  top: 80%;
+  animation-duration: 64s;
+}
+.dot24 {
+  width: 55px;
+  height: 55px;
+  left: 35%;
+  top: 75%;
+  animation-duration: 66s;
+}
+.dot25 {
+  width: 20px;
+  height: 20px;
+  left: 45%;
+  top: 85%;
+  animation-duration: 68s;
+}
+.dot26 {
+  width: 50px;
+  height: 50px;
+  left: 55%;
+  top: 90%;
+  animation-duration: 70s;
+}
+.dot27 {
+  width: 30px;
+  height: 30px;
+  left: 65%;
+  top: 70%;
+  animation-duration: 72s;
+}
+.dot28 {
+  width: 40px;
+  height: 40px;
+  left: 75%;
+  top: 80%;
+  animation-duration: 74s;
+}
+.dot29 {
+  width: 60px;
+  height: 60px;
+  left: 85%;
+  top: 75%;
+  animation-duration: 76s;
+}
+.dot30 {
+  width: 25px;
+  height: 25px;
+  left: 95%;
+  top: 85%;
+  animation-duration: 78s;
+}
+.dot31 {
+  width: 45px;
+  height: 45px;
+  left: 10%;
+  top: 90%;
+  animation-duration: 80s;
+}
+.dot32 {
+  width: 35px;
+  height: 35px;
+  left: 20%;
+  top: 95%;
+  animation-duration: 82s;
+}
+.dot33 {
+  width: 55px;
+  height: 55px;
+  left: 30%;
+  top: 10%;
+  animation-duration: 84s;
+}
+.dot34 {
+  width: 20px;
+  height: 20px;
+  left: 40%;
+  top: 5%;
+  animation-duration: 86s;
+}
+.dot35 {
+  width: 50px;
+  height: 50px;
+  left: 50%;
+  top: 10%;
+  animation-duration: 88s;
+}
+.dot36 {
+  width: 30px;
+  height: 30px;
+  left: 60%;
+  top: 15%;
+  animation-duration: 90s;
+}
+.dot37 {
+  width: 40px;
+  height: 40px;
+  left: 70%;
+  top: 25%;
+  animation-duration: 92s;
+}
+.dot38 {
+  width: 60px;
+  height: 60px;
+  left: 80%;
+  top: 30%;
+  animation-duration: 94s;
+}
+.dot39 {
+  width: 25px;
+  height: 25px;
+  left: 90%;
+  top: 35%;
+  animation-duration: 96s;
+}
+.dot40 {
+  width: 45px;
+  height: 45px;
+  left: 10%;
+  top: 60%;
+  animation-duration: 98s;
+}
+.dot41 {
+  width: 35px;
+  height: 35px;
+  left: 20%;
+  top: 55%;
+  animation-duration: 100s;
+}
+.dot42 {
+  width: 55px;
+  height: 55px;
+  left: 30%;
+  top: 65%;
+  animation-duration: 102s;
+}
+.dot43 {
+  width: 20px;
+  height: 20px;
+  left: 40%;
+  top: 70%;
+  animation-duration: 104s;
+}
+.dot44 {
+  width: 50px;
+  height: 50px;
+  left: 50%;
+  top: 80%;
+  animation-duration: 106s;
+}
+.dot45 {
+  width: 30px;
+  height: 30px;
+  left: 60%;
+  top: 85%;
+  animation-duration: 108s;
+}
+.dot46 {
+  width: 40px;
+  height: 40px;
+  left: 70%;
+  top: 90%;
+  animation-duration: 110s;
+}
+.dot47 {
+  width: 60px;
+  height: 60px;
+  left: 80%;
+  top: 95%;
+  animation-duration: 112s;
+}
+.dot48 {
+  width: 25px;
+  height: 25px;
+  left: 90%;
+  top: 10%;
+  animation-duration: 114s;
+}
+.dot49 {
+  width: 45px;
+  height: 45px;
+  left: 95%;
+  top: 15%;
+  animation-duration: 116s;
+}
+.dot50 {
+  width: 35px;
+  height: 35px;
+  left: 5%;
+  top: 5%;
+  animation-duration: 118s;
+}
